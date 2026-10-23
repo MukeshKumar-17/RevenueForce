@@ -1,0 +1,81 @@
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-5);
+  align-items: start;
+}
+
+/* Numbered steps on a line, like a short timeline. */
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  min-height: 36px;
+  padding-left: calc(28px + var(--space-3));
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 4px;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+/* The line joining one step's number to the next. */
+.steps li + li::after {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: calc(var(--space-3) * -1 - 4px);
+  height: calc(var(--space-3) + 8px);
+  border-left: 2px solid var(--surface-2);
+}
+
+.manualList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.summary {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.paths {
+  white-space: pre-line;
+  word-break: break-all;
+}
+
+@media (max-width: 640px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}

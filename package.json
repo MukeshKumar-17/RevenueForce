@@ -1,0 +1,26 @@
+{
+  "name": "revenue-inbox",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "check-analysis": "node scripts/check-analysis.js",
+    "stamp-analysis": "node scripts/check-analysis.js --stamp",
+    "export": "vite-node scripts/write-export.js"
+  },
+  "dependencies": {
+    "jszip": "^3.10.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "vite": "^6.3.5",
+    "vitest": "^3.1.4"
+  }
+}

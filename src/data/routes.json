@@ -1,0 +1,11 @@
+[
+  { "id": "deal_followup", "label": "Deal follow-up", "description": "Prospect with at least one agreed next step." },
+  { "id": "sales_coaching", "label": "Sales coaching", "description": "Rep behaviour that clearly helped or hurt, with the passage." },
+  { "id": "customer_followup", "label": "Customer follow-up", "description": "Existing customer issue or setup question." },
+  { "id": "account_risk", "label": "Account risk", "description": "Existing customer signals they may leave or reduce usage." },
+  { "id": "partner_channel", "label": "Partner", "description": "Referral or channel partner, not a direct buyer." },
+  { "id": "internal_vendor_note", "label": "Internal / vendor", "description": "SpendNest is the buyer, or internal training. Not sales activity." },
+  { "id": "product_feedback", "label": "Product feedback", "description": "A gap or defect blocking a customer, prospect or partner." },
+  { "id": "contact_update", "label": "Contact update", "description": "Do-not-call, left company, or how to contact someone." },
+  { "id": "log_only", "label": "Log only", "description": "Text exists but nobody was actually reached." }
+]

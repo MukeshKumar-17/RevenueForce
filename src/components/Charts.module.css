@@ -1,0 +1,376 @@
+/* Charts use one data colour (--chart-mark, set in global.css from theme tokens), hairline
+   gridlines in --line-soft, and text tokens for every label. Cards with a coloured ground
+   (.card-highlight, .card-inverse) swap the marks to --on-tone through --meter-fill. */
+
+/* ---- Capsule meter (headline cards) ---------------------------------- */
+.segments {
+  display: flex;
+  gap: var(--space-1);
+  height: 44px;
+}
+
+.segment {
+  flex: 1 1 0;
+  border-radius: var(--radius-pill);
+  border: 1.5px dashed var(--meter-empty, color-mix(in srgb, var(--ink-muted) 70%, transparent));
+}
+
+.segment[data-filled="true"] {
+  background: var(--meter-fill, var(--chart-mark));
+  border-color: transparent;
+}
+
+/* ---- Capsule column chart -------------------------------------------- */
+/* Room above the plot for the bubble on the busiest column. */
+.capsuleChart {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  padding-top: var(--space-6);
+}
+
+/* Tick labels sit at the same height as their gridlines (centred on the line). */
+.yAxis {
+  position: relative;
+  height: 200px;
+  min-width: var(--space-5);
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+}
+
+.yAxis span {
+  position: absolute;
+  right: 0;
+  line-height: 1;
+  transform: translateY(50%);
+}
+
+.plotArea {
+  position: relative;
+  min-width: 0;
+}
+
+.grid {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 200px;
+  pointer-events: none;
+}
+
+.grid span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  border-top: 1px solid var(--line-soft);
+}
+
+.columns {
+  position: relative;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.columnSlot {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-sm);
+  cursor: default;
+}
+
+.columnSlot:hover,
+.columnSlot[data-active="true"] {
+  background: var(--surface-2);
+}
+
+/* The hit area is the whole band; the capsule is at most 18px wide, so hours with one
+   or two records still read as small pills next to a much busier hour. */
+.capsuleTrack {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* The whole hour: a dashed outline, so the empty part reads as "records without text". */
+.capsule {
+  position: relative;
+  width: min(18px, 60%);
+  border: 1.5px dashed var(--ink-muted);
+  border-radius: var(--radius-pill);
+}
+
+/* Records with usable text, filled from the bottom over the outline. */
+.capsuleFill {
+  position: absolute;
+  left: -1.5px;
+  right: -1.5px;
+  bottom: -1.5px;
+  height: calc(var(--share) * (100% + 3px));
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  background: var(--chart-mark);
+  border-radius: var(--radius-pill);
+}
+
+.capsuleDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.bubble {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + var(--space-2));
+  transform: translateX(-50%);
+  padding: 2px var(--space-2);
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.5;
+}
+
+.xLabel {
+  font-size: var(--text-xs);
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-muted);
+  padding-bottom: var(--space-1);
+}
+
+.tooltip {
+  position: absolute;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 160px;
+  max-width: 240px;
+  padding: var(--space-2) var(--space-3);
+  background: var(--ink);
+  color: var(--bg);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.tooltip strong {
+  font-size: var(--text-md);
+}
+
+/* ---- Arc gauge -------------------------------------------------------- */
+.gauge {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  height: auto;
+  overflow: visible;
+}
+
+.gaugeTrack,
+.gaugeFill {
+  fill: none;
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+
+.gaugeTrack {
+  stroke: var(--surface-2);
+}
+
+.gaugeFill {
+  stroke: var(--chart-mark);
+}
+
+.gaugeLeader {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.gaugeLabel {
+  font-family: var(--font-body);
+  font-size: 12px;
+  fill: var(--ink-muted);
+}
+
+/* ---- Meter list (counts with a bar under each) ----------------------- */
+.meterList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.meterRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: var(--space-3);
+  row-gap: var(--space-1);
+}
+
+.meterLabel {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  min-width: 0;
+}
+
+.meterCount {
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.meterTrack,
+.meterNote {
+  grid-column: 1 / -1;
+}
+
+.meterTrack {
+  display: block;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.meterBar {
+  display: block;
+  height: 100%;
+  background: var(--chart-mark);
+  border-radius: var(--radius-pill);
+}
+
+/* Tiles: each row becomes a small panel in a grid. */
+.meterList[data-variant="tiles"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: var(--space-3);
+}
+
+.meterList[data-variant="tiles"] .meterRow {
+  align-content: start;
+  padding: var(--space-4);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius-md);
+}
+
+.meterList[data-variant="tiles"] .meterCount {
+  font-family: var(--font-head);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 1;
+}
+
+/* ---- People list ------------------------------------------------------ */
+.people {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.personRow {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) minmax(96px, 40%);
+  align-items: center;
+  gap: var(--space-3);
+  min-height: var(--tap);
+  padding: var(--space-2);
+  border-radius: var(--radius-md);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.personRow:hover {
+  background: var(--surface-2);
+  color: var(--ink);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  font-size: var(--text-xs);
+  font-weight: 700;
+}
+
+.personRow:hover .avatar {
+  background: var(--surface);
+}
+
+.personText {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.personSub {
+  font-size: var(--text-xs);
+  font-weight: 400;
+  color: var(--ink-muted);
+}
+
+.personBar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+  font-variant-numeric: tabular-nums;
+}
+
+.personTrack {
+  flex: 1 1 auto;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.personFill {
+  display: block;
+  height: 100%;
+  background: var(--chart-mark);
+  border-radius: var(--radius-pill);
+}
+
+.personBar strong {
+  min-width: 2ch;
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  /* Every other hour label on narrow screens; all hours stay in the tooltip and table view. */
+  .columnSlot[data-odd="true"] .xLabel {
+    visibility: hidden;
+  }
+
+  .personRow {
+    grid-template-columns: auto minmax(0, 1fr);
+  }
+
+  .personBar {
+    grid-column: 2;
+  }
+}

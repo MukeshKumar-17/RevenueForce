@@ -1,0 +1,1153 @@
+{
+  "generated_at": "2026-10-22T19:18:02.014Z",
+  "timezone": "Asia/Kolkata",
+  "record_count": 44,
+  "route_assignment_count": 32,
+  "records": [
+    {
+      "source_type": "meeting",
+      "source_id": "883182d8-eb86-56f9-a928-152365998d15",
+      "record_ref": "M08",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 10:00",
+      "person": "team08@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": false,
+      "review_state": "no_speech",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/meeting/M08_883182d8-eb86-56f9-a928-152365998d15.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "4b5b9192-f3fc-505a-8e77-4d2ffaa54594",
+      "record_ref": "M09",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 10:00",
+      "person": "team11@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "customer_followup",
+        "product_feedback"
+      ],
+      "route_reasons": [
+        "customer_followup: An existing customer's second company is still blocked from logging in.",
+        "product_feedback: A freshly sent reset link reports an expired token."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "customer_followup",
+        "product_feedback"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M09_4b5b9192-f3fc-505a-8e77-4d2ffaa54594.md",
+      "output_paths": [
+        "routes/customer_followup/M09_4b5b9192-f3fc-505a-8e77-4d2ffaa54594.md",
+        "routes/product_feedback/M09_4b5b9192-f3fc-505a-8e77-4d2ffaa54594.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "4f304fff-fd40-5cfc-a366-0a134c445c2a",
+      "record_ref": "M07",
+      "applied_revision": 2,
+      "batch_id": "update-002",
+      "local_start": "2026-08-21 11:00",
+      "person": "team09@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "customer_followup",
+        "product_feedback"
+      ],
+      "route_reasons": [
+        "customer_followup: An existing customer raised four issues, one of which is blocking reimbursements.",
+        "product_feedback: Reproducible product defects were shown on screen."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "customer_followup",
+        "product_feedback"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 2,
+      "record_path": "records/meeting/M07_4f304fff-fd40-5cfc-a366-0a134c445c2a.md",
+      "output_paths": [
+        "routes/customer_followup/M07_4f304fff-fd40-5cfc-a366-0a134c445c2a.md",
+        "routes/product_feedback/M07_4f304fff-fd40-5cfc-a366-0a134c445c2a.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "e0ecb112-ed94-5e8e-ae71-19def5536337",
+      "record_ref": "M05",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 12:00",
+      "person": "team08@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": false,
+      "review_state": "no_speech",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/meeting/M05_e0ecb112-ed94-5e8e-ae71-19def5536337.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "657b9e9d-9472-5b01-a127-a648ad7e8cf7",
+      "record_ref": "M06",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 12:00",
+      "person": "team10@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "needs_decision",
+      "routes": [
+        "deal_followup",
+        "sales_coaching"
+      ],
+      "route_reasons": [
+        "deal_followup: The prospect asked for information: an early opportunity with unclear buying authority.",
+        "sales_coaching: The rep supplied the volume figure instead of letting the customer size it."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "deal_followup",
+        "sales_coaching"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M06_657b9e9d-9472-5b01-a127-a648ad7e8cf7.md",
+      "output_paths": [
+        "routes/deal_followup/M06_657b9e9d-9472-5b01-a127-a648ad7e8cf7.md",
+        "routes/sales_coaching/M06_657b9e9d-9472-5b01-a127-a648ad7e8cf7.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "337f297d-9385-5b82-9e54-5019c1ed912c",
+      "record_ref": "M10",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 13:00",
+      "person": "team12@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "internal_vendor_note"
+      ],
+      "route_reasons": [
+        "internal_vendor_note: Internal training between colleagues; no customer present."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "internal_vendor_note"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M10_337f297d-9385-5b82-9e54-5019c1ed912c.md",
+      "output_paths": [
+        "routes/internal_vendor_note/M10_337f297d-9385-5b82-9e54-5019c1ed912c.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "93f4867d-65cd-5236-bc55-7bd57df8ac24",
+      "record_ref": "M14",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 13:00",
+      "person": "team14@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": false,
+      "review_state": "not_captured",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/meeting/M14_93f4867d-65cd-5236-bc55-7bd57df8ac24.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "794a9d1c-889d-5957-873f-8a1271b03455",
+      "record_ref": "M13",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 14:00",
+      "person": "team09@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": false,
+      "review_state": "not_captured",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/meeting/M13_794a9d1c-889d-5957-873f-8a1271b03455.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "b0f79b3d-37ba-52f9-b2bc-58b159dd6d91",
+      "record_ref": "M04",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 14:30",
+      "person": "team09@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "needs_decision",
+      "routes": [
+        "customer_followup",
+        "account_risk",
+        "product_feedback"
+      ],
+      "route_reasons": [
+        "customer_followup: An existing customer is owed three checks by SpendNest.",
+        "account_risk: The customer says it may look at other options because it needs credit.",
+        "product_feedback: The replacement card programme does not meet the customer's need for credit."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "customer_followup",
+        "account_risk",
+        "product_feedback"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M04_b0f79b3d-37ba-52f9-b2bc-58b159dd6d91.md",
+      "output_paths": [
+        "routes/customer_followup/M04_b0f79b3d-37ba-52f9-b2bc-58b159dd6d91.md",
+        "routes/account_risk/M04_b0f79b3d-37ba-52f9-b2bc-58b159dd6d91.md",
+        "routes/product_feedback/M04_b0f79b3d-37ba-52f9-b2bc-58b159dd6d91.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "398672e7-62dd-5afd-846d-0237d49792fb",
+      "record_ref": "M03",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 15:00",
+      "person": "team08@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "deal_followup",
+        "sales_coaching",
+        "product_feedback"
+      ],
+      "route_reasons": [
+        "deal_followup: The prospect described a small pilot and is waiting on CFO approval.",
+        "sales_coaching: An inconsistent price quote cost credibility.",
+        "product_feedback: The prospect expected credit; the domestic cards are prepaid only."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "deal_followup",
+        "sales_coaching",
+        "product_feedback"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M03_398672e7-62dd-5afd-846d-0237d49792fb.md",
+      "output_paths": [
+        "routes/deal_followup/M03_398672e7-62dd-5afd-846d-0237d49792fb.md",
+        "routes/sales_coaching/M03_398672e7-62dd-5afd-846d-0237d49792fb.md",
+        "routes/product_feedback/M03_398672e7-62dd-5afd-846d-0237d49792fb.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "b747f592-810e-583c-9b81-8db5ab035806",
+      "record_ref": "C10",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 16:51",
+      "person": "meera@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "contact_update",
+        "deal_followup",
+        "sales_coaching"
+      ],
+      "route_reasons": [
+        "contact_update: The contact has left the company and refused outbound follow-up.",
+        "deal_followup: The contact accepted a brief by message.",
+        "sales_coaching: The rep pushed for a call after the contact had set the terms."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "contact_update",
+        "deal_followup",
+        "sales_coaching"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C10_b747f592-810e-583c-9b81-8db5ab035806.md",
+      "output_paths": [
+        "routes/contact_update/C10_b747f592-810e-583c-9b81-8db5ab035806.md",
+        "routes/deal_followup/C10_b747f592-810e-583c-9b81-8db5ab035806.md",
+        "routes/sales_coaching/C10_b747f592-810e-583c-9b81-8db5ab035806.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "4a1de681-f884-55e8-b1ad-de22d17cd959",
+      "record_ref": "C09",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 16:56",
+      "person": "meera@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "deal_followup",
+        "contact_update"
+      ],
+      "route_reasons": [
+        "deal_followup: The contact pointed to the business head as the right person.",
+        "contact_update: The contact asked not to be named when approaching the business head."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "deal_followup",
+        "contact_update"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C09_4a1de681-f884-55e8-b1ad-de22d17cd959.md",
+      "output_paths": [
+        "routes/deal_followup/C09_4a1de681-f884-55e8-b1ad-de22d17cd959.md",
+        "routes/contact_update/C09_4a1de681-f884-55e8-b1ad-de22d17cd959.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "1a21c409-c050-5787-90af-2667e057e1b6",
+      "record_ref": "M02",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 17:00",
+      "person": "team07@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "internal_vendor_note"
+      ],
+      "route_reasons": [
+        "internal_vendor_note: SpendNest is the buyer evaluating a supplier, so this is not sales activity."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "internal_vendor_note"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M02_1a21c409-c050-5787-90af-2667e057e1b6.md",
+      "output_paths": [
+        "routes/internal_vendor_note/M02_1a21c409-c050-5787-90af-2667e057e1b6.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "fc651475-187c-5882-a644-b501408e8647",
+      "record_ref": "M11",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 17:00",
+      "person": "team13@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": false,
+      "review_state": "no_speech",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/meeting/M11_fc651475-187c-5882-a644-b501408e8647.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "129497b2-8e1d-5e01-919c-e8a852b5ff68",
+      "record_ref": "C08",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 17:23",
+      "person": "meera@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "deal_followup"
+      ],
+      "route_reasons": [
+        "deal_followup: The contact referred the rep to a colleague and asked for a proposal."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "deal_followup"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C08_129497b2-8e1d-5e01-919c-e8a852b5ff68.md",
+      "output_paths": [
+        "routes/deal_followup/C08_129497b2-8e1d-5e01-919c-e8a852b5ff68.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "428817fa-7e9e-5418-a7d4-bb396d28dfbf",
+      "record_ref": "C07",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 17:52",
+      "person": "dev@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "partner_channel",
+        "sales_coaching"
+      ],
+      "route_reasons": [
+        "partner_channel: The firm already refers clients to account providers, so it is a referral partner, not a buyer.",
+        "sales_coaching: The rep could not say what the product is when asked."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "partner_channel",
+        "sales_coaching"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C07_428817fa-7e9e-5418-a7d4-bb396d28dfbf.md",
+      "output_paths": [
+        "routes/partner_channel/C07_428817fa-7e9e-5418-a7d4-bb396d28dfbf.md",
+        "routes/sales_coaching/C07_428817fa-7e9e-5418-a7d4-bb396d28dfbf.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "12216d5c-e254-52c6-b344-47de4c6e1ae5",
+      "record_ref": "C06",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 18:01",
+      "person": "meera@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "needs_decision",
+      "routes": [
+        "contact_update"
+      ],
+      "route_reasons": [
+        "contact_update: The prospect will reach out if a need appears; recording this stops repeat calls."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "contact_update"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C06_12216d5c-e254-52c6-b344-47de4c6e1ae5.md",
+      "output_paths": [
+        "routes/contact_update/C06_12216d5c-e254-52c6-b344-47de4c6e1ae5.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "75a6b94f-7717-5cfb-9e41-0acc94415e17",
+      "record_ref": "C05",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 18:05",
+      "person": "meera@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "deal_followup",
+        "sales_coaching"
+      ],
+      "route_reasons": [
+        "deal_followup: The prospect asked for the presentation: a weak but explicit next step.",
+        "sales_coaching: Every feature pitched was already covered by the prospect's current provider."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "deal_followup",
+        "sales_coaching"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C05_75a6b94f-7717-5cfb-9e41-0acc94415e17.md",
+      "output_paths": [
+        "routes/deal_followup/C05_75a6b94f-7717-5cfb-9e41-0acc94415e17.md",
+        "routes/sales_coaching/C05_75a6b94f-7717-5cfb-9e41-0acc94415e17.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "cb5cecac-e68d-52b7-b10b-b0c748efc467",
+      "record_ref": "M01",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 18:30",
+      "person": "team06@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "partner_channel",
+        "product_feedback"
+      ],
+      "route_reasons": [
+        "partner_channel: The advisory firm agreed to start referral-partner onboarding.",
+        "product_feedback: Accounts cannot take card payments directly; partners need this stated in their material."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "partner_channel",
+        "product_feedback"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/meeting/M01_cb5cecac-e68d-52b7-b10b-b0c748efc467.md",
+      "output_paths": [
+        "routes/partner_channel/M01_cb5cecac-e68d-52b7-b10b-b0c748efc467.md",
+        "routes/product_feedback/M01_cb5cecac-e68d-52b7-b10b-b0c748efc467.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "bcdcbf56-d338-5c78-9a97-42c2fc1c9931",
+      "record_ref": "C04",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 19:52",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "log_only"
+      ],
+      "route_reasons": [
+        "log_only: A one-sided voicemail; nobody was reached."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "log_only"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C04_bcdcbf56-d338-5c78-9a97-42c2fc1c9931.md",
+      "output_paths": [
+        "routes/log_only/C04_bcdcbf56-d338-5c78-9a97-42c2fc1c9931.md"
+      ]
+    },
+    {
+      "source_type": "meeting",
+      "source_id": "c759b921-e9d3-540c-a06b-474c5710342d",
+      "record_ref": "M12",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 20:00",
+      "person": "arun@example.com",
+      "person_role": "meeting organiser",
+      "usable_text": false,
+      "review_state": "not_captured",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/meeting/M12_c759b921-e9d3-540c-a06b-474c5710342d.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "20d509ba-d589-5334-9aef-ea4ce6105b1a",
+      "record_ref": "C03",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 22:17",
+      "person": "kiran@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "deal_followup"
+      ],
+      "route_reasons": [
+        "deal_followup: An existing prospect agreed to an email and a call on Monday or Tuesday."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "deal_followup"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C03_20d509ba-d589-5334-9aef-ea4ce6105b1a.md",
+      "output_paths": [
+        "routes/deal_followup/C03_20d509ba-d589-5334-9aef-ea4ce6105b1a.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "4b870624-8aad-5315-a60e-0db95981cf99",
+      "record_ref": "C02",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:14",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "analysed",
+      "routes": [
+        "log_only"
+      ],
+      "route_reasons": [
+        "log_only: Only a receptionist was reached; the call ended at a voicemail transfer."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "log_only"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C02_4b870624-8aad-5315-a60e-0db95981cf99.md",
+      "output_paths": [
+        "routes/log_only/C02_4b870624-8aad-5315-a60e-0db95981cf99.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "2ec4404c-beee-5377-a63c-aab701da08ed",
+      "record_ref": "C01",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:41",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": true,
+      "review_state": "needs_decision",
+      "routes": [
+        "contact_update",
+        "sales_coaching"
+      ],
+      "route_reasons": [
+        "contact_update: The contact objected to the call and asked how their number was obtained.",
+        "sales_coaching: The purpose was not stated up front, and the complaint was not met with an offer to remove the contact."
+      ],
+      "route_source": "suggested",
+      "manual_override": false,
+      "suggested_routes": [
+        "contact_update",
+        "sales_coaching"
+      ],
+      "analysis_freshness": "current",
+      "analysis_revision": 1,
+      "record_path": "records/call/C01_2ec4404c-beee-5377-a63c-aab701da08ed.md",
+      "output_paths": [
+        "routes/contact_update/C01_2ec4404c-beee-5377-a63c-aab701da08ed.md",
+        "routes/sales_coaching/C01_2ec4404c-beee-5377-a63c-aab701da08ed.md"
+      ]
+    },
+    {
+      "source_type": "call",
+      "source_id": "94b4f015-b243-5b89-b435-9957125ecdd4",
+      "record_ref": "B20",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:51",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B20_94b4f015-b243-5b89-b435-9957125ecdd4.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "6ee11c0e-c74a-5805-b552-657443378b72",
+      "record_ref": "B19",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:51",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B19_6ee11c0e-c74a-5805-b552-657443378b72.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "26c3ccc3-63a6-55f6-a5a3-e279b36b7e88",
+      "record_ref": "B18",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:51",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B18_26c3ccc3-63a6-55f6-a5a3-e279b36b7e88.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "1645d595-1896-5201-9395-cb8a9f1c5f3a",
+      "record_ref": "B17",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:52",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B17_1645d595-1896-5201-9395-cb8a9f1c5f3a.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "1f5181ed-4175-5d73-a16b-01d404b1820d",
+      "record_ref": "B16",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:53",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B16_1f5181ed-4175-5d73-a16b-01d404b1820d.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "2ada5ab0-8a84-54b7-a071-cd5bd6ad5abd",
+      "record_ref": "B15",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:53",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B15_2ada5ab0-8a84-54b7-a071-cd5bd6ad5abd.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "81da63f4-eac6-5efd-95e1-69ad6e6def25",
+      "record_ref": "B14",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:53",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B14_81da63f4-eac6-5efd-95e1-69ad6e6def25.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "6521ed7d-53fc-5b3b-be77-7d4610c90ed7",
+      "record_ref": "B13",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:54",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B13_6521ed7d-53fc-5b3b-be77-7d4610c90ed7.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "9a64eb58-d462-5a6e-aa9e-c0f88852ebe0",
+      "record_ref": "B12",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:55",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B12_9a64eb58-d462-5a6e-aa9e-c0f88852ebe0.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "bfefcb48-1a98-5610-a0ee-0f03434188a9",
+      "record_ref": "B11",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:55",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B11_bfefcb48-1a98-5610-a0ee-0f03434188a9.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "3ea930a1-0496-51e3-9dca-adc3be29331a",
+      "record_ref": "B10",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:55",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B10_3ea930a1-0496-51e3-9dca-adc3be29331a.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "747390bc-f359-5609-bf79-0a44ef8919bd",
+      "record_ref": "B09",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:56",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B09_747390bc-f359-5609-bf79-0a44ef8919bd.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "77350513-913c-5fed-b4e6-71009de9df03",
+      "record_ref": "B08",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:56",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B08_77350513-913c-5fed-b4e6-71009de9df03.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "f9be8537-1ad9-58fc-be24-78f73d09db9c",
+      "record_ref": "B07",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:57",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B07_f9be8537-1ad9-58fc-be24-78f73d09db9c.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "53f61c95-27b9-50c2-8755-08f957594950",
+      "record_ref": "B06",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:57",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B06_53f61c95-27b9-50c2-8755-08f957594950.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "903641e9-d761-591a-a149-334ddfcd236e",
+      "record_ref": "B05",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:58",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B05_903641e9-d761-591a-a149-334ddfcd236e.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "530207ea-d67b-521a-8085-bdb9ae665417",
+      "record_ref": "B04",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:58",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B04_530207ea-d67b-521a-8085-bdb9ae665417.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "024caffc-d16e-5843-b325-682dbc8d448e",
+      "record_ref": "B03",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:59",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B03_024caffc-d16e-5843-b325-682dbc8d448e.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "5747e4cd-e24f-5bed-bf74-9e3f326b2d77",
+      "record_ref": "B02",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:59",
+      "person": "leela@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B02_5747e4cd-e24f-5bed-bf74-9e3f326b2d77.md",
+      "output_paths": []
+    },
+    {
+      "source_type": "call",
+      "source_id": "4868e5cd-5ab8-581c-a0e4-acc37385f0cf",
+      "record_ref": "B01",
+      "applied_revision": 1,
+      "batch_id": "initial-001",
+      "local_start": "2026-08-21 23:59",
+      "person": "arun@example.com",
+      "person_role": "call rep",
+      "usable_text": false,
+      "review_state": "metadata_only",
+      "routes": [],
+      "route_reasons": [],
+      "route_source": "none",
+      "manual_override": false,
+      "suggested_routes": [],
+      "analysis_freshness": "not_applicable",
+      "analysis_revision": null,
+      "record_path": "records/call/B01_4868e5cd-5ab8-581c-a0e4-acc37385f0cf.md",
+      "output_paths": []
+    }
+  ],
+  "shared_outputs": [
+    {
+      "path": "daily/2026-08-21_manager-brief.md",
+      "kind": "manager_brief",
+      "source_records": [
+        "meeting:4f304fff-fd40-5cfc-a366-0a134c445c2a",
+        "meeting:4b5b9192-f3fc-505a-8e77-4d2ffaa54594",
+        "meeting:398672e7-62dd-5afd-846d-0237d49792fb",
+        "call:129497b2-8e1d-5e01-919c-e8a852b5ff68",
+        "meeting:b0f79b3d-37ba-52f9-b2bc-58b159dd6d91",
+        "meeting:cb5cecac-e68d-52b7-b10b-b0c748efc467",
+        "call:428817fa-7e9e-5418-a7d4-bb396d28dfbf",
+        "call:b747f592-810e-583c-9b81-8db5ab035806",
+        "call:4a1de681-f884-55e8-b1ad-de22d17cd959",
+        "call:2ec4404c-beee-5377-a63c-aab701da08ed",
+        "call:75a6b94f-7717-5cfb-9e41-0acc94415e17",
+        "meeting:1a21c409-c050-5787-90af-2667e057e1b6",
+        "meeting:337f297d-9385-5b82-9e54-5019c1ed912c"
+      ]
+    }
+  ]
+}

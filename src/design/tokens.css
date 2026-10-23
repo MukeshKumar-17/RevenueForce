@@ -1,0 +1,67 @@
+/* =====================================================================
+   tokens.css — Brand design tokens (Round 2 · Pointillism)
+   ---------------------------------------------------------------------
+   Active theme: optical-garden (the other five themes were removed, as DESIGN.md §2 asks).
+     <html data-theme="optical-garden">                  native (light)
+     <html data-theme="optical-garden" data-mode="dark"> dark
+   ===================================================================== */
+
+/* ---- Google Fonts -------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;500;700&display=swap");
+
+/* ---- Shared scale (same for every theme) --------------------------- */
+:root {
+  /* spacing — 4px base */
+  --space-1: 4px;  --space-2: 8px;  --space-3: 12px; --space-4: 16px;
+  --space-5: 24px; --space-6: 32px; --space-7: 48px; --space-8: 64px; --space-9: 96px;
+
+  /* type scale (rem, 16px root) */
+  --text-xs: 0.75rem;   /* 12 — labels, captions */
+  --text-sm: 0.875rem;  /* 14 — helper text, table cells */
+  --text-md: 1rem;      /* 16 — body */
+  --text-lg: 1.125rem;  /* 18 — lead paragraph */
+  --text-xl: 1.5rem;    /* 24 — card titles, h3 */
+  --text-2xl: 2rem;     /* 32 — h2 */
+  --text-3xl: 3rem;     /* 48 — h1 */
+  --text-display: clamp(2.75rem, 6vw, 5.5rem); /* hero only */
+  --leading-tight: 1.02;
+  --leading-body: 1.6;
+
+  /* layout */
+  --container: 1200px;
+  --tap: 44px;               /* minimum touch target */
+
+  /* motion */
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 600ms;
+}
+
+/* =====================================================================
+   05 · OPTICAL GARDEN — light, cool pastels, soft serif, very rounded
+   ===================================================================== */
+[data-theme="optical-garden"] {
+  --font-head: "Fraunces", Georgia, serif;
+  --font-body: "Karla", system-ui, sans-serif;
+  --head-weight: 400; --head-transform: none; --head-tracking: -0.01em; --head-shadow: none;
+
+  --bg: #F7F5F0; --surface: #FFFFFF; --surface-2: #EEEBF5;
+  --ink: #2C2F57; --ink-muted: #5B5E80; --line: #C9C7D6; --line-soft: #E4E2EC;
+  --accent: #4A63B5; --accent-ink: #FFFFFF; --accent-2: #F4A988;
+  --danger: #B3261E; --success: #2E6B55;
+  --focus: #4A63B5;
+
+  --radius-sm: 12px; --radius-md: 20px; --radius-lg: 28px; --radius-pill: 999px;
+  --border-w: 1px;
+
+  --dot: #6C8CD5; --dot-2: #F4A988;
+  --dot-palette: #6C8CD5, #B39DDB, #8CCFB9, #F4A988, #F3D27A;
+  --stipple-mode: color; --stipple-lit: 0; --dot-size: 4.4;
+}
+[data-theme="optical-garden"][data-mode="dark"] {
+  --bg: #17182B; --surface: #212340; --surface-2: #2C2F57;
+  --ink: #F1EFF8; --ink-muted: #B8B9D6; --line: #3A3D66; --line-soft: #2A2C4D;
+  --accent: #9DB4F0; --accent-ink: #17182B; --focus: #9DB4F0;
+  --danger: #FF9C9C; --success: #9EE0C6;
+}

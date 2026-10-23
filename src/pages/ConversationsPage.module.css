@@ -1,0 +1,14 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  align-items: flex-end;
+}
+
+.select {
+  min-width: 200px;
+}
+
+.about {
+  min-width: 240px;
+}

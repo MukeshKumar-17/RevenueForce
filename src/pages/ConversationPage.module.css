@@ -1,0 +1,77 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+  gap: var(--space-5);
+  align-items: start;
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.notice {
+  background: var(--surface-2);
+  border-left: 4px solid var(--accent-2);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-3);
+}
+
+.fields {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.fields div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  border-bottom: 1px dotted var(--line-soft);
+}
+
+.fields dt {
+  color: var(--ink-muted);
+}
+
+.fields dd {
+  margin: 0;
+  text-align: right;
+  word-break: break-word;
+}
+
+.summary {
+  min-height: var(--tap);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.raw {
+  font-size: var(--text-xs);
+  max-height: 360px;
+  overflow: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 0;
+}
+
+@media (max-width: 860px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Who, revision and batch as tags under the title. */
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.facts :global(.tag) {
+  white-space: normal;
+}

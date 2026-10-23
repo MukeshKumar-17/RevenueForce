@@ -1,0 +1,152 @@
+.main {
+  padding-top: var(--space-7);
+  padding-bottom: var(--space-8);
+}
+
+/* Visible only when focused with the keyboard. */
+.skipLink {
+  position: absolute;
+  left: var(--space-4);
+  top: var(--space-2);
+  transform: translateY(-200%);
+}
+
+.skipLink:focus-visible {
+  transform: none;
+}
+
+/* PillNav takes the space between the brand and the status/toggle; it measures this box
+   to decide when to collapse into its menu button. */
+.pillNavSlot {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* PillNav's hidden measuring strip must not widen the page. */
+.pillNavSlot :global(.pill-nav__measure) {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Phones: brand and menu button on the first row, status and dark-mode toggle below. */
+@media (max-width: 768px) {
+  .pillNavSlot,
+  .pillNavSlot :global(.pill-nav[data-collapsed]) {
+    justify-content: flex-end;
+  }
+
+  .statusRow {
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  /* The open menu grows leftwards so the page names have room. */
+  .pillNavSlot :global(.pill-nav__panel) {
+    left: auto;
+    width: max(100%, 220px);
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-7);
+  }
+}
+
+/* The sun/moon icon is for desktop only. */
+.modeIcon {
+  display: none;
+}
+
+/* Desktop: no bar behind the nav. The brand sits on the left, the pills in the centre with the
+   round dark-mode button just before them. The header sticks to the top, slides away while
+   scrolling down and returns on scroll up. */
+@media (min-width: 769px) {
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-2);
+    background: transparent;
+    border-bottom: 0;
+    pointer-events: none; /* only the brand, pills and button take clicks, not the empty strip */
+    transition: transform var(--dur) var(--ease);
+  }
+
+  .navHidden {
+    transform: translateY(-100%);
+  }
+
+  .nav > *,
+  .modeToggle {
+    pointer-events: auto;
+  }
+
+  .nav :global(.nav-brand) {
+    grid-area: 1 / 1;
+    justify-self: start;
+    transition: opacity var(--dur) var(--ease), visibility var(--dur);
+  }
+
+  .nav .brandAway {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .pillNavSlot {
+    grid-area: 1 / 2;
+  }
+
+  /* The status row's children join the grid; the record count is not shown on desktop. */
+  .statusRow {
+    display: contents;
+  }
+
+  .recordCount {
+    display: none;
+  }
+
+  .modeToggle {
+    grid-area: 1 / 1;
+    justify-self: end;
+    width: 44px; /* PillNav's bar height */
+    height: 44px;
+    min-height: 0;
+    padding: 0;
+    border-radius: 50%;
+    background: var(--surface);
+    box-shadow: inset 0 0 0 1px var(--line-soft);
+    color: var(--ink);
+  }
+
+  .modeToggle:hover {
+    background: var(--surface-2);
+  }
+
+  .modeIcon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  /* Kept for screen readers. */
+  .modeText {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+}

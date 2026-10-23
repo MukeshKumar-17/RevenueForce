@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" data-theme="optical-garden">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:," />
+    <title>RevenueForce</title>
+    <script>
+      // Light/dark before first paint: new visitors start in light mode; a saved toggle choice wins.
+      try {
+        if (localStorage.getItem("revenue-inbox/mode") === "dark") document.documentElement.dataset.mode = "dark";
+      } catch {}
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

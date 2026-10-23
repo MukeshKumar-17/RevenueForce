@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en" data-theme="kraft-matinee">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand components — reference</title>
+<link rel="stylesheet" href="./tokens.css">
+<link rel="stylesheet" href="./ui.css">
+<style>
+  /* page-only layout for this reference sheet (not part of the system) */
+  .toolbar { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; gap: var(--space-3);
+    align-items: center; padding: var(--space-3) var(--space-5); background: var(--surface);
+    border-bottom: var(--border-w) solid var(--line-soft); }
+  .toolbar .select { width: auto; min-width: 220px; }
+  section.block { padding: var(--space-8) 0; border-bottom: 1px solid var(--line-soft); }
+  .block-head { display: flex; flex-direction: column; gap: var(--space-2); margin-bottom: var(--space-6); }
+  .hero { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-7); }
+  .hero-copy { flex: 1 1 360px; display: flex; flex-direction: column; gap: var(--space-5); }
+  .hero-art-wrap { flex: 1 1 360px; display: flex; justify-content: center; }
+  .grid-3 { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+  .form-grid { display: grid; gap: var(--space-5); grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); max-width: 820px; }
+  .swatches { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+  .swatch { display: flex; flex-direction: column; gap: 6px; font-size: var(--text-sm); }
+  .swatch i { display: block; height: 64px; border-radius: var(--radius-md); border: 1px solid var(--line-soft); }
+  .demo-frame { background: var(--surface); border: var(--border-w) solid var(--line-soft); border-radius: var(--radius-lg); overflow: hidden; }
+</style>
+</head>
+<body>
+
+<div class="toolbar" role="region" aria-label="Theme preview controls">
+  <label class="label" for="theme">Theme</label>
+  <select class="select" id="theme">
+    <option value="sugar-grain">01 Sugar Grain</option>
+    <option value="afterglow">02 Afterglow Archive</option>
+    <option value="dust-sparks">03 Dust and Sparks</option>
+    <option value="kraft-matinee" selected>04 Kraft Matinee</option>
+    <option value="optical-garden">05 Optical Garden</option>
+    <option value="riso-orbit">06 Riso Orbit</option>
+  </select>
+  <label class="label" for="mode">Mode</label>
+  <select class="select" id="mode">
+    <option value="">Native</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
+</div>
+
+<nav class="nav" aria-label="Main">
+  <a class="nav-brand" href="#">[Brand]</a>
+  <ul class="nav-links">
+    <li><a href="#" aria-current="page">Overview</a></li>
+    <li><a href="#">Projects</a></li>
+    <li><a href="#">Library</a></li>
+    <li><a href="#">Settings</a></li>
+  </ul>
+  <div class="row">
+    <a class="btn btn-ghost btn-sm" href="#">Sign in</a>
+    <a class="btn btn-primary btn-sm" href="#">Get started</a>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- HERO ---------------------------------------------------------- -->
+  <section class="block">
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="label">Hero · one stipple illustration, never behind text</span>
+        <h1 class="display">Small dots, big ideas.</h1>
+        <p class="lead">The illustration carries the texture. Headlines stay short, body copy stays calm, and there is one clear primary action.</p>
+        <div class="row">
+          <a class="btn btn-primary" href="#">Primary action</a>
+          <a class="btn btn-secondary" href="#">Secondary</a>
+        </div>
+      </div>
+      <div class="hero-art-wrap"><div id="hero-art" class="hero-art"></div></div>
+    </div>
+  </section>
+
+  <!-- TOKENS -------------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">Colour tokens</span><h2>Palette</h2></div>
+    <div class="swatches">
+      <div class="swatch"><i style="background: var(--bg)"></i><b>--bg</b></div>
+      <div class="swatch"><i style="background: var(--surface)"></i><b>--surface</b></div>
+      <div class="swatch"><i style="background: var(--surface-2)"></i><b>--surface-2</b></div>
+      <div class="swatch"><i style="background: var(--ink)"></i><b>--ink</b></div>
+      <div class="swatch"><i style="background: var(--ink-muted)"></i><b>--ink-muted</b></div>
+      <div class="swatch"><i style="background: var(--accent)"></i><b>--accent</b></div>
+      <div class="swatch"><i style="background: var(--accent-2)"></i><b>--accent-2</b></div>
+      <div class="swatch"><i style="background: var(--dot)"></i><b>--dot</b></div>
+    </div>
+    <div style="margin-top: var(--space-6)" class="stack">
+      <span class="label">Texture strip · section divider</span>
+      <div class="stipple-strip" data-stipple="ramp" data-seed="3"></div>
+    </div>
+  </section>
+
+  <!-- TYPE ---------------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">Type scale</span><h2>Typography</h2></div>
+    <div class="stack">
+      <div class="display">Display — hero only</div>
+      <h1>H1 — page title</h1>
+      <h2>H2 — section title</h2>
+      <h3>H3 — card title</h3>
+      <p class="lead">Lead — the one paragraph under a page title.</p>
+      <p>Body — everything else. Keep lines under about 70 characters for comfortable reading.</p>
+      <p class="muted">Muted — helper text, timestamps, secondary details.</p>
+      <span class="label">Label — overlines and table headers</span>
+    </div>
+  </section>
+
+  <!-- BUTTONS ------------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">One primary per view</span><h2>Buttons</h2></div>
+    <div class="row">
+      <button class="btn btn-primary" type="button">Save changes</button>
+      <button class="btn btn-secondary" type="button">Cancel</button>
+      <button class="btn btn-ghost" type="button">Learn more</button>
+      <button class="btn btn-primary" type="button" disabled>Disabled</button>
+      <button class="btn btn-secondary btn-icon" type="button" aria-label="Add item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+      </button>
+      <button class="btn btn-primary" type="button" aria-busy="true">
+        <span class="dot-loader" aria-hidden="true"><span style="background: var(--accent-ink)"></span><span style="background: var(--accent-ink)"></span><span style="background: var(--accent-ink)"></span></span>
+        Saving…
+      </button>
+    </div>
+  </section>
+
+  <!-- FORMS --------------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">Label above, help below</span><h2>Inputs</h2></div>
+    <form class="form-grid" onsubmit="return false">
+      <div class="field">
+        <label for="f-name">Project name</label>
+        <input class="input" id="f-name" placeholder="e.g. Spring launch" aria-describedby="f-name-help">
+        <span class="help" id="f-name-help">Shown on your dashboard.</span>
+      </div>
+      <div class="field is-error">
+        <label for="f-email">Email</label>
+        <input class="input" id="f-email" type="email" value="hello@" aria-invalid="true" aria-describedby="f-email-help">
+        <span class="help" id="f-email-help">Enter a full email address, like name@brand.com.</span>
+      </div>
+      <div class="field">
+        <label for="f-type">Type</label>
+        <select class="select" id="f-type"><option>Presentation</option><option>Invoice</option><option>Poster</option></select>
+      </div>
+      <div class="field">
+        <label for="f-notes">Notes</label>
+        <textarea class="textarea" id="f-notes" placeholder="Anything we should know?"></textarea>
+      </div>
+      <label class="check"><input type="checkbox" checked> Email me when it's ready</label>
+    </form>
+  </section>
+
+  <!-- CARDS --------------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">Small art header, real content below</span><h2>Cards</h2></div>
+    <div class="grid-3">
+      <a class="card" href="#">
+        <div class="card-art" data-stipple="fade" data-seed="11"></div>
+        <span class="badge">Draft</span>
+        <h3>[Card title]</h3>
+        <p class="muted">[One or two lines describing this item.]</p>
+      </a>
+      <a class="card" href="#">
+        <div class="card-art" data-stipple="sphere" data-seed="12"></div>
+        <span class="badge badge-accent">New</span>
+        <h3>[Card title]</h3>
+        <p class="muted">[One or two lines describing this item.]</p>
+      </a>
+      <a class="card" href="#">
+        <div class="card-art" data-stipple="blob" data-seed="13"></div>
+        <span class="badge">Shared</span>
+        <h3>[Card title]</h3>
+        <p class="muted">[One or two lines describing this item.]</p>
+      </a>
+    </div>
+  </section>
+
+  <!-- EMPTY STATE --------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">Explain + one action</span><h2>Empty state</h2></div>
+    <div class="demo-frame">
+      <div class="empty">
+        <div class="empty-art" data-stipple="blob" data-seed="21"></div>
+        <h3>No projects yet</h3>
+        <p>Projects you create or that are shared with you will show up here.</p>
+        <button class="btn btn-primary" type="button">Create a project</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOADING ------------------------------------------------------- -->
+  <section class="block">
+    <div class="block-head"><span class="label">Skeleton for layout, dots for actions</span><h2>Loading state</h2></div>
+    <div class="grid-3" aria-busy="true" aria-label="Loading projects">
+      <div class="card"><div class="skeleton" style="height: 120px"></div><div class="skeleton" style="width: 60%"></div><div class="skeleton" style="width: 85%"></div></div>
+      <div class="card"><div class="skeleton" style="height: 120px"></div><div class="skeleton" style="width: 50%"></div><div class="skeleton" style="width: 75%"></div></div>
+      <div class="card"><div class="skeleton" style="height: 120px"></div><div class="skeleton" style="width: 65%"></div><div class="skeleton" style="width: 80%"></div></div>
+    </div>
+    <div class="row" style="margin-top: var(--space-5)">
+      <span class="dot-loader" role="status" aria-label="Loading"><span></span><span></span><span></span></span>
+      <span class="muted">Inline loader</span>
+    </div>
+  </section>
+
+  <!-- FEEDBACK ------------------------------------------------------ -->
+  <section class="block">
+    <div class="block-head"><span class="label">Short, specific, dismissible</span><h2>Toast &amp; table</h2></div>
+    <div class="stack">
+      <div class="toast" role="status">Project saved. <a href="#" style="color: inherit; font-weight: 700">Undo</a></div>
+      <div class="table-wrap">
+        <table class="table">
+          <thead><tr><th>Description</th><th>Qty</th><th>Rate</th><th style="text-align:right">Amount</th></tr></thead>
+          <tbody>
+            <tr><td>[Line item description]</td><td>1</td><td>[Rate]</td><td style="text-align:right">[Amount]</td></tr>
+            <tr><td>[Line item description]</td><td>2</td><td>[Rate]</td><td style="text-align:right">[Amount]</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script type="module">
+  import { stipple, autoInit } from "./stipple.js";
+
+  const html = document.documentElement;
+  const HERO = {
+    "sugar-grain": "sphere",
+    "afterglow": "planet",
+    "dust-sparks": "smoke",
+    "kraft-matinee": "landscape",
+    "optical-garden": "garden",
+    "riso-orbit": "galaxy",
+  };
+
+  const heroEl = document.getElementById("hero-art");
+  const fitHero = () => {
+    // landscape is a wide banner; everything else is square
+    heroEl.style.aspectRatio = HERO[html.dataset.theme] === "landscape" ? "3 / 1.1" : "1 / 1";
+  };
+  fitHero();
+  const hero = stipple(heroEl, { preset: HERO[html.dataset.theme], seed: 7 });
+  autoInit();
+
+  const apply = () => {
+    fitHero();
+    requestAnimationFrame(() => hero.redraw({ preset: HERO[html.dataset.theme], animate: true }));
+  };
+  document.getElementById("theme").addEventListener("change", (e) => { html.dataset.theme = e.target.value; apply(); });
+  document.getElementById("mode").addEventListener("change", (e) => {
+    if (e.target.value) html.dataset.mode = e.target.value; else delete html.dataset.mode;
+    apply();
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+{
+  "date": "2026-08-21",
+  "timezone": "Asia/Kolkata",
+  "preparedFrom": {
+    "records": 44,
+    "usableTexts": 18,
+    "note": "Prepared from the post-update state (initial batch + update revision 2)."
+  },
+  "sections": [
+    {
+      "title": "Do today",
+      "items": [
+        {
+          "text": "Willowfield Trust: reimbursements stuck in Processing. An update was promised within 1–2 hours; confirm it reached the customer.",
+          "refs": [{ "sourceType": "meeting", "sourceId": "4f304fff-fd40-5cfc-a366-0a134c445c2a", "ref": "M07", "turn": 19 }]
+        },
+        {
+          "text": "Northkite / Brookmint: login still fails with an expired token on a fresh link. Update promised today, or Monday at the latest.",
+          "refs": [{ "sourceType": "meeting", "sourceId": "4b5b9192-f3fc-505a-8e77-4d2ffaa54594", "ref": "M09", "turn": 31 }]
+        },
+        {
+          "text": "Asterloom Systems: send an itemised proposal (subscription vs one-time setup) before their CFO review. The bundled price cost trust.",
+          "refs": [{ "sourceType": "meeting", "sourceId": "398672e7-62dd-5afd-846d-0237d49792fb", "ref": "M03", "turn": 23 }]
+        },
+        {
+          "text": "Warmest call lead: referral to a people-operations owner who may already be evaluating. Send the proposal today.",
+          "refs": [{ "sourceType": "call", "sourceId": "129497b2-8e1d-5e01-919c-e8a852b5ff68", "ref": "C08" }]
+        }
+      ]
+    },
+    {
+      "title": "Watch",
+      "items": [
+        {
+          "text": "Cedarwave Distribution: forced card migration, but the customer's main need is credit and they will 'consider another option'. Three checks are owed by SpendNest.",
+          "refs": [{ "sourceType": "meeting", "sourceId": "b0f79b3d-37ba-52f9-b2bc-58b159dd6d91", "ref": "M04", "turn": 11 }]
+        },
+        {
+          "text": "Partners: Harborpath Advisory is ready to onboard and needs a referral link; Willowbank Advisory expects a proposal and a Monday call.",
+          "refs": [
+            { "sourceType": "meeting", "sourceId": "cb5cecac-e68d-52b7-b10b-b0c748efc467", "ref": "M01", "turn": 12 },
+            { "sourceType": "call", "sourceId": "428817fa-7e9e-5418-a7d4-bb396d28dfbf", "ref": "C07" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Coaching",
+      "items": [
+        {
+          "text": "Say whether cards are prepaid or credit, and quote recurring and one-time charges separately, before the demo. Both surprised the Asterloom prospect.",
+          "refs": [
+            { "sourceType": "meeting", "sourceId": "398672e7-62dd-5afd-846d-0237d49792fb", "ref": "M03", "turn": 6 },
+            { "sourceType": "meeting", "sourceId": "398672e7-62dd-5afd-846d-0237d49792fb", "ref": "M03", "turn": 23 }
+          ]
+        },
+        {
+          "text": "Respect contact terms: one contact refused a follow-up call, one asked not to be named, one complained about being called at all.",
+          "refs": [
+            { "sourceType": "call", "sourceId": "b747f592-810e-583c-9b81-8db5ab035806", "ref": "C10" },
+            { "sourceType": "call", "sourceId": "4a1de681-f884-55e8-b1ad-de22d17cd959", "ref": "C09" },
+            { "sourceType": "call", "sourceId": "2ec4404c-beee-5377-a63c-aab701da08ed", "ref": "C01" }
+          ]
+        },
+        {
+          "text": "Discover before pitching: every feature listed on one cold call was already covered by the prospect's current provider.",
+          "refs": [{ "sourceType": "call", "sourceId": "75a6b94f-7717-5cfb-9e41-0acc94415e17", "ref": "C05" }]
+        }
+      ]
+    },
+    {
+      "title": "Product themes",
+      "items": [
+        {
+          "text": "Credit vs prepaid: a new prospect and an existing customer both expected credit cards. For the existing customer it is a retention risk.",
+          "refs": [
+            { "sourceType": "meeting", "sourceId": "398672e7-62dd-5afd-846d-0237d49792fb", "ref": "M03", "turn": 6 },
+            { "sourceType": "meeting", "sourceId": "b0f79b3d-37ba-52f9-b2bc-58b159dd6d91", "ref": "M04", "turn": 11 }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Not counted as sales activity",
+      "items": [
+        {
+          "text": "LedgerBridge is a supplier SpendNest is evaluating (SpendNest is the buyer), and the billing walkthrough is internal training. Neither adds to opportunity signals. No deal values are reported because none exist in the data.",
+          "refs": [
+            { "sourceType": "meeting", "sourceId": "1a21c409-c050-5787-90af-2667e057e1b6", "ref": "M02", "turn": 10 },
+            { "sourceType": "meeting", "sourceId": "337f297d-9385-5b82-9e54-5019c1ed912c", "ref": "M10" }
+          ]
+        }
+      ]
+    }
+  ]
+}

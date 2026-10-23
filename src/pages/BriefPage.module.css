@@ -1,0 +1,53 @@
+/* Cards flow down the first column, then the second, so they read in order. */
+.sections {
+  column-count: 2;
+  column-gap: var(--space-4);
+}
+
+.sections > section {
+  break-inside: avoid;
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 900px) {
+  .sections {
+    column-count: 1;
+  }
+}
+
+.warning {
+  background: var(--surface-2);
+  border-left: 4px solid var(--accent-2);
+  border-radius: var(--radius-md);
+  padding: var(--space-4) var(--space-5);
+}
+
+.items {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.items li {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid color-mix(in srgb, currentColor 15%, transparent);
+}
+
+.items li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.sources {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-sm);
+}
